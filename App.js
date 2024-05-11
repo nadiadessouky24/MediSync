@@ -9,6 +9,7 @@ import PharmacyPage from "./pages/PharmacyPage";
 import ChatPage from "./pages/ChatPage";
 import NewChatPage from "./pages/NewChatPage";
 import BookAppointmentPage from "./pages/BookAppointmentPage";
+import ProfilePage from "./pages/ProfilePage";
 
 const Stack = createNativeStackNavigator();
 
@@ -43,6 +44,12 @@ export default function App() {
         <Stack.Screen
           name="BookAppointment"
           component={BookAppointmentPage}
+    
+        />
+
+<Stack.Screen
+          name="Profile"
+          component={ProfilePage}
     
         />
       </Stack.Navigator>

@@ -6,6 +6,7 @@ import ChatsListPage from "./ChatsListPage";
 import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/Ionicons";
 import BookAppointmentPage from "./BookAppointmentPage";
+import ProfilePage from "./ProfilePage";
 
 const Tab = createBottomTabNavigator();
 // const splash = require("../assets/splash.png");
@@ -63,6 +64,15 @@ export default function TabView() {
           options={{
             tabBarIcon: ({ color }) => (
               <Icon name="chatbubble-outline" color={color} size={26} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Profile"
+          component={ProfilePage}
+          options={{
+            tabBarIcon: ({ color }) => (
+              <Icon name="person-circle-outline" color={color} size={30} />
             ),
           }}
         />
