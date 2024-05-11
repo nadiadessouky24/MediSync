@@ -10,6 +10,7 @@ import ChatPage from "./pages/ChatPage";
 import NewChatPage from "./pages/NewChatPage";
 import BookAppointmentPage from "./pages/BookAppointmentPage";
 import ProfilePage from "./pages/ProfilePage";
+import PharmacyDetailsPage from "./pages/PharmacyDetailsPage";
 
 const Stack = createNativeStackNavigator();
 
@@ -41,17 +42,10 @@ export default function App() {
           })}
         />
 
-        <Stack.Screen
-          name="BookAppointment"
-          component={BookAppointmentPage}
-    
-        />
+        <Stack.Screen name="BookAppointment" component={BookAppointmentPage} />
 
-<Stack.Screen
-          name="Profile"
-          component={ProfilePage}
-    
-        />
+        <Stack.Screen name="Profile" component={ProfilePage} />
+        <Stack.Screen name="PharmacyDetails" component={PharmacyDetailsPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );
