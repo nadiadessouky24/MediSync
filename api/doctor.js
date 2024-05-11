@@ -7,3 +7,13 @@ export function getDoctorsBySpeciality(speciality) {
     }, 1000);
   });
 }
+
+
+
+export function getAllDoctors(speciality) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(doctors);
+    }, 1000);
+  });
+}

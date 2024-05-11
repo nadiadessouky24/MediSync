@@ -8,6 +8,7 @@ import SingUpPage from "./pages/SingUpPage";
 import PharmacyPage from "./pages/PharmacyPage";
 import ChatPage from "./pages/ChatPage";
 import NewChatPage from "./pages/NewChatPage";
+import BookAppointmentPage from "./pages/BookAppointmentPage";
 
 const Stack = createNativeStackNavigator();
 
@@ -34,9 +35,15 @@ export default function App() {
           component={ChatPage}
           options={({ route }) => ({
             title: route.params.name + " Chat",
-            headerTitleAlign:"center",
+            headerTitleAlign: "center",
             headerTitleStyle: { fontWeight: "bold", textAlign: "center" },
           })}
+        />
+
+        <Stack.Screen
+          name="BookAppointment"
+          component={BookAppointmentPage}
+    
         />
       </Stack.Navigator>
     </NavigationContainer>

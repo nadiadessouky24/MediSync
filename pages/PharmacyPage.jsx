@@ -4,12 +4,14 @@ import { Button, View } from "react-native";
 
 import ChatsListPage from "./ChatsListPage";
 import { useNavigation } from "@react-navigation/native";
+import Icon from "react-native-vector-icons/Ionicons";
+import BookAppointmentPage from "./BookAppointmentPage";
 
 const Tab = createBottomTabNavigator();
 // const splash = require("../assets/splash.png");
 
 const PharmacyPage = () => {
-  const navigation=useNavigation();
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -19,9 +21,6 @@ const PharmacyPage = () => {
         backgroundColor: "white",
       }}
     >
-
-
-
       {/* <Text>Home Page</Text> */}
       {/* <Image
         source={splash}
@@ -39,6 +38,18 @@ export default function TabView() {
     <>
       <Tab.Navigator>
         <Tab.Screen
+          name="BookAppointment"
+          component={BookAppointmentPage}
+          options={{
+            tabBarIcon: ({ color }) => (
+              <Icon name="calendar" color={color} size={26} />
+            ),
+
+            title: "Book Appointment",
+            headerTitleStyle: { textAlign: "center" },
+          }}
+        />
+        <Tab.Screen
           name="Pharmacy"
           component={PharmacyPage}
           options={{
@@ -46,7 +57,15 @@ export default function TabView() {
             headerTitleStyle: { fontWeight: "bold", textAlign: "center" },
           }}
         />
-        <Tab.Screen name="ChatList" component={ChatsListPage} />
+        <Tab.Screen
+          name="ChatList"
+          component={ChatsListPage}
+          options={{
+            tabBarIcon: ({ color }) => (
+              <Icon name="chatbubble-outline" color={color} size={26} />
+            ),
+          }}
+        />
       </Tab.Navigator>
     </>
   );
