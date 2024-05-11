@@ -20,14 +20,14 @@ export default function App() {
           component={Login}
           options={{ title: "Welcome" }}
         />
-
-        <Stack.Screen name="SignUp" component={SingUpPage} />
-
         <Stack.Screen
-          name="Pharmacy"
+          name="PharmacyHome"
           component={PharmacyPage}
           options={{ headerShown: false }}
         />
+
+        <Stack.Screen name="SignUp" component={SingUpPage} />
+
         <Stack.Screen name="NewChat" component={NewChatPage} />
         <Stack.Screen
           name="Chat"
