@@ -18,7 +18,7 @@ import { APP_NAME, colors } from "../constants";
 import { useNavigation } from "@react-navigation/native";
 
 export default function LoginPage() {
-  const [click, setClick] = useState(false);
+  const [rememberMeClick, setRememberMeClick] = useState(false);
   const { username, setUsername } = useState("");
   const { password, setPassword } = useState("");
   const navigation = useNavigation();
@@ -74,8 +74,8 @@ export default function LoginPage() {
         <View style={styles.rememberView}>
           <View style={styles.switch}>
             <Switch
-              value={click}
-              onValueChange={setClick}
+              value={rememberMeClick}
+              onValueChange={setRememberMeClick}
               trackColor={{ true: "green", false: "gray" }}
             />
             <Text style={styles.rememberText}>Remember Me</Text>
